@@ -1,19 +1,31 @@
-import { useState } from 'react'
+// App.js
+import React, { useState } from 'react';
 import './App.css';
 import GetAllCars from './components/GetAllCars';
 
 function App() {
+  const [refreshCars, setRefreshCars] = useState(false);
 
-  const [count, setCount] = useState(0)
-  const handleCount = () => {
-    setCount(count + 1)
-  }
+  const handleCarAdded = () => {
+    setRefreshCars(!refreshCars); // Toggle to trigger refresh in GetAllCars
+  };
 
-  console.log(count)
+  const handleCarDeleted = () => {
+    setRefreshCars(!refreshCars); // Toggle to trigger refresh in GetAllCars
+  };
+
+  const handleCarUpdated = () => {
+    setRefreshCars(!refreshCars); // Toggle to trigger refresh in GetAllCars
+  };
 
   return (
     <div className="container">
-      <GetAllCars count={count} handleCount={handleCount} />
+      <GetAllCars
+        refresh={refreshCars}
+        onCarAdded={handleCarAdded}
+        onCarDeleted={handleCarDeleted}
+        onCarUpdated={handleCarUpdated}
+      />
     </div>
   );
 }
