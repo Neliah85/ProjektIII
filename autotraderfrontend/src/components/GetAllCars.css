@@ -1,29 +1,42 @@
-.get-all-cars-container {
+/* Globális stílusok */
+body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* GetAllCars komponens stílusai */
+.get-all-cars-container {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Autólista konténer */
 .car-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Középre igazítva a kártyákat */
     margin-top: 20px;
     gap: 15px;
 }
 
+/* Autókártya stílusai */
 .car-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 10px; /* Csökkentett padding */
     margin: 10px;
-    width: 260px;
+    width: 200px; /* Csökkentett szélesség */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex; /* Flexbox elrendezés a tartalomhoz */
+    flex-direction: column;
+    align-items: center; /* Tartalom középre igazítása */
+    text-align: center; /* Szöveg középre igazítása */
 }
 
 .car-card:hover {
@@ -32,65 +45,70 @@
 }
 
 .car-card h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin-top: 5px; /* Csökkentett margó */
+    margin-bottom: 3px; /* Csökkentett margó */
     color: #333;
+    font-size: 1em;
 }
 
 .car-card p {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Csökkentett margó */
     color: #666;
+    font-size: 0.9em;
 }
 
 .car-details {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Csökkentett margó */
     color: #555;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .car-actions {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center; /* Gomb középre */
+    margin-top: 10px;
 }
 
+/* AddNewCar komponens stílusai */
 .add-new-car-container {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
-    padding: 30px;
+    padding: 20px; /* Csökkentett padding */
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    width: 400px;
+    width: 350px; /* Csökkentett szélesség */
 }
 
 .add-new-car-container h2 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Csökkentett margó */
     text-align: center;
+    font-size: 1.2em;
 }
 
 .car-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; /* Csökkentett gap */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Csökkentett margó */
     color: #555;
     font-weight: bold;
+    font-size: 0.9em;
 }
 
 .form-group input.form-control {
     width: 100%;
-    padding: 10px;
+    padding: 8px; /* Csökkentett padding */
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .form-group input.form-control:focus {
@@ -103,12 +121,13 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 15px; /* Csökkentett margó */
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 15px;
-    font-size: 1em;
+    padding: 8px 12px; /* Csökkentett padding */
+    font-size: 0.9em;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
@@ -140,10 +159,10 @@
     background-color: #dc3545;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 6px 10px; /* Csökkentett padding */
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.8em;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
@@ -156,10 +175,10 @@
     background-color: #ffc107;
     color: #333;
     border: none;
-    padding: 8px 15px;
+    padding: 6px 10px; /* Csökkentett padding */
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.8em;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 

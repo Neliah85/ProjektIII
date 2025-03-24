@@ -3,7 +3,7 @@ import React from 'react'
 export default function UpdateCar(props) {
 
   const handleCarData = async () => {
-    const url = `http://localhost:5081/Cars/CarById?id=${props.carId}`
+    const url = `http://localhost:5000/Cars/CarById?id=${props.carId}`
     const request = fetch(url, {
       method: 'PUT',
       headers: {
