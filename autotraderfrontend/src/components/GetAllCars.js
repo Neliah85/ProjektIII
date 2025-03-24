@@ -75,8 +75,8 @@ export default function GetAllCars(props) {
         <div className="get-all-cars-container">
             <AddNewCar handleCount={handleRefresh} carObj={carToUpdate} handleCarObj={handleEditCar} />
 
-            {loading && <p>Loading cars...</p>}
-            {error && <p>Error loading cars: {error}</p>}
+            {loading && <p>Autók betöltése</p>}
+            {error && <p>Hiba a betöltés közben: {error}</p>}
             <div className="car-list">{carElements}</div>
         </div>
     );
