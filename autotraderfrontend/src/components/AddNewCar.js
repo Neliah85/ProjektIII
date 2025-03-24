@@ -56,7 +56,7 @@ export default function AddNewCar(props) {
             return;
         }
 
-        const response = await request.json();
+       
         props.handleCount();
         props.handleCarObj(null);
     };
