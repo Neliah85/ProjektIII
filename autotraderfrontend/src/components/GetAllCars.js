@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import DeleteCar from './DeleteCar';
 import AddNewCar from './AddNewCar';
 
-// Dátum formázó függvény
+
 const formatDate = (dateString) => {
     const date = new Date(dateString);
     const year = date.getFullYear();
